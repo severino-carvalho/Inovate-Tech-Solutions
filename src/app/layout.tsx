@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   ],
 }
 
-type PropsLayout = {
-  children: ReactNode
-}
-
-export default function RootLayout({ children }: PropsLayout) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} antialiased bg-[rgba(0,0,0,8)] text-white`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
