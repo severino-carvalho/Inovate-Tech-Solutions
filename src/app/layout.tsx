@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
+import { LayoutProps } from '../../.next/types/app/layout'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,7 +28,9 @@ export const metadata: Metadata = {
   ],
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: { children: ReactNode } & LayoutProps) {
   return (
     <html lang="pt-BR">
       <body
