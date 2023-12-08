@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <main
       className={clsx(
-        'flex p-7 sm:px-10 md:px-16 lg:px-24 sm:pt-10 md:pt-16 lg:pt-24 gap-10 md:gap-16 lg:gap-24 h-full flex-col items-center justify-between',
+        'flex h-full flex-col items-center justify-between gap-10 p-7 sm:px-10 sm:pt-10 md:gap-16 md:px-16 md:pt-16 lg:gap-24 lg:px-24 lg:pt-24',
         exo.className,
       )}
     >

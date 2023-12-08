@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.className} antialiased h-full bg-[rgba(0,0,0,8)] text-white`}
+        className={`${inter.className} h-full bg-[rgba(0,0,0,8)] text-white antialiased`}
       >
         {children}
       </body>
