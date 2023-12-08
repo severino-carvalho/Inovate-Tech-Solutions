@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="w-full h-full">
+    <div className="h-full w-full">
       <TopNav />
       {children}
     </div>
