@@ -1,26 +1,9 @@
-import { ROTAS } from '@/@types/enums/RotasEnum'
 import { objetoSobre } from '@/actions/Projetos'
-import Breadcrumb from '@/ui/Breadcrumb/Breadcrumb'
-import { HomeIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
 export default function Page() {
-  const itensBreadcrumb = [
-    {
-      titulo: 'Home',
-      href: ROTAS.HOME,
-      Icone: HomeIcon,
-    },
-    {
-      titulo: 'Sobre',
-      href: ROTAS.SOBRE,
-      Icone: InformationCircleIcon,
-    },
-  ]
-
   return (
     <div className="flex flex-col gap-10 p-7 sm:px-10 sm:pt-10 md:gap-16">
-      <Breadcrumb itens={itensBreadcrumb} />
       <main className="flex min-h-screen flex-col gap-14">
         <header className="h-full w-full pt-5">
           <h1 className="text-3xl font-bold lowercase first-letter:uppercase md:text-5xl">

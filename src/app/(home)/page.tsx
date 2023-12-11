@@ -51,9 +51,9 @@ export default function Page() {
         <div className="flex items-center justify-center gap-5">
           <Link
             className="h-min rounded-md bg-white px-5 py-2 text-black transition-all delay-75 ease-out hover:bg-neutral-300"
-            href={ROTAS.PROJETOS}
+            href={ROTAS.CALCULO}
           >
-            Projetos
+            Calcular
           </Link>
           <Link
             className="rounded-md border border-neutral-700 bg-[#0a0a0a] px-5 py-2 transition-all delay-75 ease-out hover:bg-neutral-800"

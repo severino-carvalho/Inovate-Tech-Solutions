@@ -8,9 +8,24 @@ import { usePathname } from 'next/navigation'
 import { ROTAS } from '../../@types/enums/RotasEnum'
 
 const links = [
-  { name: 'Home', href: ROTAS.HOME, icon: HomeIcon },
-  { name: 'Projetos', href: ROTAS.PROJETOS, icon: PresentationChartLineIcon },
-  { name: 'Sobre', href: ROTAS.SOBRE, icon: ExclamationCircleIcon },
+  {
+    name: 'Home',
+    href: ROTAS.HOME,
+    icon: HomeIcon,
+    verificacao: (termo: string): boolean => termo === ROTAS.HOME,
+  },
+  {
+    name: 'Calcular',
+    href: ROTAS.CALCULO,
+    icon: PresentationChartLineIcon,
+    verificacao: (termo: string): boolean => termo.includes(ROTAS.CALCULO),
+  },
+  {
+    name: 'Sobre',
+    href: ROTAS.SOBRE,
+    icon: ExclamationCircleIcon,
+    verificacao: (termo: string): boolean => termo.includes(ROTAS.SOBRE),
+  },
 ]
 
 export default function NavLinks() {
@@ -26,9 +41,10 @@ export default function NavLinks() {
             href={link.href}
             className={clsx(
               'flex grow items-center justify-center gap-2 rounded-md text-sm font-medium transition-all delay-75 ease-out sm:flex-none sm:justify-start',
-              { 'text-[#3291ff]': pathname === link.href },
+              { 'text-[#3291ff]': link.verificacao(pathname) },
               {
-                'text-[#888] hover:text-neutral-200': pathname !== link.href,
+                'text-[#888] hover:text-neutral-200':
+                  !link.verificacao(pathname),
               },
             )}
           >

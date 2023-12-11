@@ -16,10 +16,10 @@ export type ProjetoProps = {
 }
 
 const id = '55971846-d46d-4937-a4d9-867ddcbe0bba'
-export const projetos: ProjetoProps[] = [
+export const calculos: ProjetoProps[] = [
   {
     id,
-    href: [ROTAS.PROJETOS, id].join('/'),
+    href: [ROTAS.CALCULO, id].join('/'),
     img: silo,
     titulo:
       'Armazenamento de Grãos Reinventado: Inovações Tecnológicas para uma Agricultura de Excelência',
@@ -132,24 +132,20 @@ export const objetoSobre: ProjetoProps = {
 }
 
 // function mockProjetos(num: number): ProjetoProps[] {
-//   const projetos: ProjetoProps[] = []
+//   const calculo: ProjetoProps[] = []
 
 //   for (let i = 0; i < num; i++) {
 //     const id = faker.string.uuid()
 
-//     const projeto: ProjetoProps = {
+//     const calculo: ProjetoProps = {
 //       id,
-//       href: ROTAS.PROJETOS + '/' + id,
+//       href: ROTAS.CALCULO + '/' + id,
 //       img: silo,
 //       texto: faker.lorem.paragraph(),
 //       titulo: faker.lorem.words(3),
 //     }
-//     projetos.push(projeto)
+//     calculo.push(calculo)
 //   }
 
-//   return projetos
+//   return calculo
 // }
-
-function gerarParagrafos(): ParagrafoProps[] {
-  return []
-}

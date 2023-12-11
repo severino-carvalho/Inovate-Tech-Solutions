@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 export default function Card({ titulo, texto, href, img }: ProjetoProps) {
   return (
-    <div className="max-w-sm rounded-lg border border-neutral-900 shadow shadow-neutral-900 dark:bg-neutral-950">
+    <div className="max-w-sm rounded-lg border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900">
       <Link href={href}>
         <Image className="rounded-t-lg" src={img} alt="" />
       </Link>
       <div className="p-5">
-        <Link href="#">
+        <Link href={href}>
           <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl">
             {titulo.slice(0, 20)}...
           </h5>

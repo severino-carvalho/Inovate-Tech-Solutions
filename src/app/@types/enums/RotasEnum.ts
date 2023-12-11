@@ -1,5 +1,5 @@
 export enum ROTAS {
   HOME = '/',
-  PROJETOS = '/projetos',
+  CALCULO = '/calculo',
   SOBRE = '/sobre',
 }
